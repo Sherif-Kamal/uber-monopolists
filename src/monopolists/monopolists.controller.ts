@@ -19,7 +19,7 @@ export class MonopolistsController {
     // there should be a seperate access-control Module
     // instead of " == Role.ADMIN " but its just for the sake of time.
     if (user && user._id
-      // && user.role === Role.ADMIN
+      && user.role === Role.ADMIN
       && this.allowedPeriods.includes(period)) {
       let monopolist = await this.monopolistService.listMonopolists(period);
       return monopolist;
