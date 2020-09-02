@@ -66,7 +66,7 @@ UserSchema.methods.generateAuthToken = function () {
   var token = jwt.sign(
     {
       _id: user._id.toHexString(),
-      role: "admin",
+      role: user.role,
     }, JWT_SECRET).toString();
 
     user.token = token;
