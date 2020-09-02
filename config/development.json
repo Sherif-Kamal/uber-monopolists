@@ -1,0 +1,9 @@
+{
+  "JWT": {
+    "SECRET": "t6v9y$B&E)H@McQfTjWnZr4u7x!z%C*F-JaNdRgUkXp2s5v8y/B?D(G+KbPeShVm"
+},
+  "SERVER": {
+    "PORT": "4500",
+    "MONGODB_URI": "mongodb://localhost:27017/UBER"
+}
+}

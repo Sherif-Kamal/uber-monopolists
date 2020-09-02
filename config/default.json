@@ -1,0 +1,9 @@
+{
+  "WINSTON": {
+      "FORMAT": "YYYY-MM-DD HH:mm:ss",
+      "FILE_PATH": "./storage/log-files/UBER-%DATE%.log",
+      "DATE_PATTERN": "YYYY-MM-DD",
+      "MAX_SIZE": "20m",
+      "MAX_FILES": "14d"
+  }
+}
