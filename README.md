@@ -48,60 +48,42 @@ password: 123456
 1- Register new driver :
 
 - POST   /auth/register
-
-- Request body :
+- Request body : JSON
  {
-   email: "hey@gmail.com",
-   password: "123456"
+   "email": "hey@gmail.com",
+   "password": "123456"
  }
-==========================================
+---
 2- Login :
 
 - POST   /auth/login
-
-- Request body :
+- Request body : JSON
  {
-   email: "hey@gmail.com",
-   password: "123456"
+   "email": "hey@gmail.com",
+   "password": "123456"
  }
-==========================================
+---
 3- Add trip for a driver: 
 
 - POST   /trips
-
 - Headers :
   key : x-auth 
   value: driver jwt-token
-===========================================
+---
 4- List Monopolists: 
 
 - POST   /monopolists/{period}
-
-  period =  month  --  List of drivers exceeding 10% of the trips this month.
-  period =  year   --  List of drivers exceeding 10% of the trips this year.
-  period =  ever   --  List of drivers exceeding 10% of the trips all time.
+a) List of drivers exceeding 10% of the trips this month.
+    period =  month  
+b) List of drivers exceeding 10% of the trips this year.
+    period =  year   
+c) List of drivers exceeding 10% of the trips all time.
+    period =  ever 
 
 - Headers :
   key : x-auth 
   value: admin jwt-token
-===========================================
-
-| Route          | Method  | Paramters         | Request body              | Headers
-| ---------------|:-------:| -----------------:|--------------------------:|------------:
-| /auth/register | POST    |                   |{                          |
-|                |         |                   | "email": "hey@gmail.com", |
-|                |         |                   | "password": "123456"      |
-|                |         |                   |}                          |
-|----------------|---------|-------------------|---------------------------|-------------
-|                |         |                   |                           |
-|                |         |                   |                           |
-|                |         |                   |                           |
-|                |         |                   |                           |
-|                |         |                   |                           |
-|                |         |                   |                           |
-|                |         |                   |                           |
-
-
+---
 
 [TODO- Features]
 
