@@ -38,10 +38,7 @@ export class UserRepoistory {
             .then((token) => {
             return token;
           });
-        }).catch((e) => {
-          console.log(e);
-          return Promise.reject();
-        });
+        })
   }
   
   async seedUsers() {
