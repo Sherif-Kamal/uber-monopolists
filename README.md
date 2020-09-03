@@ -64,9 +64,6 @@ password: 123456
    email: "hey@gmail.com",
    password: "123456"
  }
-
- - After login jwt token will be sent in headers
-   to be used later for other routes.
 ==========================================
 3- Add trip for a driver: 
 
@@ -89,8 +86,28 @@ password: 123456
   value: admin jwt-token
 ===========================================
 
+| Route          | Method  | Paramters         | Request body              | Headers
+| ---------------|:-------:| -----------------:|--------------------------:|------------:
+| /auth/register | POST    |                   |{                          |
+|                |         |                   | "email": "hey@gmail.com", |
+|                |         |                   | "password": "123456"      |
+|                |         |                   |}                          |
+|----------------|---------|-------------------|---------------------------|-------------
+|                |         |                   |                           |
+|                |         |                   |                           |
+|                |         |                   |                           |
+|                |         |                   |                           |
+|                |         |                   |                           |
+|                |         |                   |                           |
+|                |         |                   |                           |
+
+
+
+[TODO- Features]
+
 
 ## Test
+# NOT YET IMPLEMENTED
 ```bash
 # unit tests
 $ npm run test
