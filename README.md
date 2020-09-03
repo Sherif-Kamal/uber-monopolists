@@ -73,6 +73,7 @@ password: 123456
 4- List Monopolists: 
 
 - POST   /monopolists/{period}
+
 a) List of drivers exceeding 10% of the trips this month.
     period =  month  
 b) List of drivers exceeding 10% of the trips this year.
