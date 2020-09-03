@@ -147,8 +147,8 @@ export class MonopolistRepoistory {
         }
       }
     ]);
-    console.log(TotalTripsCurrentMonth[0].total);
-    return TotalTripsCurrentMonth[0].total;
+    console.log({ TotalTripsCurrentMonth });
+    return TotalTripsCurrentMonth.length ? TotalTripsCurrentMonth[0].total : [];
   }
 
   async getTotalTripsCurrentYear() {
@@ -169,7 +169,7 @@ export class MonopolistRepoistory {
       }
     ]);
 
-    return TotalTripsCurrentYear[0].total;
+    return TotalTripsCurrentYear.length ? TotalTripsCurrentYear[0].total : [];
 
   }
 
@@ -184,7 +184,7 @@ export class MonopolistRepoistory {
         }
       }
     ]);
-    return TotalTripsEver[0].total;
+    return TotalTripsEver.length ? TotalTripsEver[0].total :[] ;
 
   }
 

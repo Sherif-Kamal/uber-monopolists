@@ -43,11 +43,54 @@ email: sherif@develop.com
 password: 123456
 
 
-[TODO- Features]
+## Web Services: JSON
+
+1- Register new driver :
+
+- POST   /auth/register
+
+- Request body :
+ {
+   email: "hey@gmail.com",
+   password: "123456"
+ }
+==========================================
+2- Login :
+
+- POST   /auth/login
+
+- Request body :
+ {
+   email: "hey@gmail.com",
+   password: "123456"
+ }
+
+ - After login jwt token will be sent in headers
+   to be used later for other routes.
+==========================================
+3- Add trip for a driver: 
+
+- POST   /trips
+
+- Headers :
+  key : x-auth 
+  value: driver jwt-token
+===========================================
+4- List Monopolists: 
+
+- POST   /monopolists/{period}
+
+  period =  month  --  List of drivers exceeding 10% of the trips this month.
+  period =  year   --  List of drivers exceeding 10% of the trips this year.
+  period =  ever   --  List of drivers exceeding 10% of the trips all time.
+
+- Headers :
+  key : x-auth 
+  value: admin jwt-token
+===========================================
 
 
 ## Test
-# NOT YET IMPLEMENTED
 ```bash
 # unit tests
 $ npm run test

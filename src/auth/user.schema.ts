@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const jwt = require('jsonwebtoken');
+import * as config from 'config';
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
-import * as config from 'config';
 import { promises } from 'dns';
 let uniqueValidator = require('mongoose-unique-validator');
 
