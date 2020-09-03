@@ -42,8 +42,13 @@ export class UserRepoistory {
   }
   
   async seedUsers() {
-    await this.userModel.deleteMany({}); 
-    return this.userModel.insertMany(this.users);
+    let count = await this.userModel.estimatedDocumentCount();
+    // await this.userModel.deleteMany({}); 
+    if (count == 0) {
+      return this.userModel.insertMany(this.users);
+    } else {
+      return Promise.reject();
+    }
   }
 
 }

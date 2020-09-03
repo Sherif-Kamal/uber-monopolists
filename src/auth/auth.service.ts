@@ -25,7 +25,7 @@ export class AuthService {
       this.logger.info('Users Collection seeded!');
      
     } catch (e) {
-      this.logger.error(`Was unable to seed Users ${e}`);
+      this.logger.info(`Was unable to seed Users ${e}`);
       console.log(e);
     }
     }
